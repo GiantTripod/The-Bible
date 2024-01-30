@@ -1,2 +1,0 @@
-
-![roadmap](files/python.pdf)
