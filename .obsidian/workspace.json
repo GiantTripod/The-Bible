@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/python/notebook/Fundamentals.md",
+                "file": "Notes/python/Python Roadmap.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "9bdbcd74a0012f60",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/python/notebook/Fundamentals.md",
+                "file": "Notes/python/Python Roadmap.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/python/notebook/Fundamentals.md",
+                "file": "Notes/python/Python Roadmap.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/python/notebook/Fundamentals.md"
+                "file": "Notes/python/Python Roadmap.md"
               }
             }
           }
@@ -149,6 +148,14 @@
   },
   "active": "a2778fff0ea102de",
   "lastOpenFiles": [
+    "README.md",
+    "Notes/python/Python Roadmap.md",
+    "Notes/python/files/python.pdf",
+    "Notes/python/python.pdf",
+    "Notes/python.pdf",
+    "python.pdf",
+    "Notes/python/files",
+    "Notes/python/notebook/Fundamentals.md",
     "Notes/python/practice/practice problems/Untitled.md",
     "Notes/python/practice/practice problems/syntax.md"
   ]

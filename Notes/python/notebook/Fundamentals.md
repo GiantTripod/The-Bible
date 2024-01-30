@@ -84,6 +84,7 @@
 		- **escape characters**:
 			- Strings can include escape characters to represent special characters, like newline (`\n`) or tab (`\t`).
 			- `multiline_string = "This is a line.\nThis is a new line."`
+			- `multiline_string = """ This is a multiline string in Python. """`
 		- **String methods**:
 		```
 			  len(): Returns the length of the string.
@@ -94,6 +95,20 @@
 			  find(): Returns the index of the first occurrence of a substring.
 			  count(): Counts the occurrences of a substring.
 			  split(): Split a string into a list where each word is a list item.
+			  startswith(): Checks if a string starts with a specified prefix.
+			  endswith(): Checks if a string ends with a specified suffix.
+			  capitalize(): Capitalizes the first character of a string.
+		```
+		- **Formatting strings**:
+			- this allows you to inject variables and other code into strings
+		```
+			  name = "Chris" 
+			  age = 28 
+			  formatted_string = f"My name is {name} and I am {age} years old."
+
+			  price = 19.99 
+			  quantity = 3 
+			  total = f"Total cost: {price * quantity:.2f}"
 		```
 	- bool -
 	- NaN -
@@ -125,13 +140,6 @@
 		- str() -
 	- **internal functions**: 
 		- random(), randrange(low, high) -
-		- len() -
-		- **String functions**:
-			- upper() 
-			- lower()
-			- strip()
-			- replace()
-			- split()
 
 # **3. Data Structures:**
 
