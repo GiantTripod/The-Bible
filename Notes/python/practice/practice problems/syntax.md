@@ -127,3 +127,32 @@
 ```
 	
 ```
+
+
+### Easy:
+
+5. Write a program to calculate the area of a rectangle. Take the length and width as input from the user.
+6. Create a function that takes two numbers as parameters and returns their sum.
+7. Use a loop to print the numbers from 1 to 5.
+8. Define a dictionary with at least three key-value pairs representing information about your dog.
+
+### Medium:
+
+9. Write a program to check if a number is even or odd.
+10. Create a function that checks if a given word is a palindrome (reads the same backward as forward).
+11. Implement a simple calculator that can add, subtract, multiply, or divide two numbers based on user input.
+12. Write a program that finds the largest number in a list.
+
+### Hard:
+
+13. Create a class called `Person` with attributes for name and age. Create an object of this class and print its details.
+14. Write a program to find all prime numbers between 1 and 50.
+15. Implement a guessing game where the computer randomly selects a number, and the user has to guess it.
+16. Create a function that calculates the factorial of a given number.
+
+### Very Hard:
+
+17. Implement a text-based adventure game using functions and conditional statements.
+18. Write a program to sort a list of numbers in ascending order without using built-in functions.
+19. Create a program that simulates a basic file system with commands like create file, delete file, create directory, etc.
+20. Build a simple web scraper in Python that extracts information from a website.
