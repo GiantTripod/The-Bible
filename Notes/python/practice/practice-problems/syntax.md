@@ -1,26 +1,19 @@
 **1. Hello World:** (Very Easy) Write a program that prints "Hello, World!" to the console.
 
 ```
-	print("Hello, Wolrd!")
+	
 ```
 
 **2. Number Addition:** (Easy) Write a program that takes two numbers as input and prints their sum.
 
 ```
-	def WeAddThings(x, y)
-		z = x + y
-		print(z)
+	
 ```
 
 **3. Odd or Even:** (Easy) Write a program that takes a number as input and prints "Even" if it is even, "Odd" if it is odd, and "Neither" if it is zero.
 
 ```
-	def OddOrEven(x)
-		if (x % 2)
-			print("even")
-		elif (x % 1)
-			print('odd')
-		else(print('zero'))
+	
 	
 ```
 
@@ -50,17 +43,7 @@
 
 **8. Fibonacci Sequence:** (Medium) Write a program that generates the first 10 numbers of the Fibonacci sequence (1, 1, 2, 3, 5, 8, 13, 21, 34, 55).
 
-**9. List Statistics:** (Challenging) Write a program that takes a list of numbers as input and calculates the minimum, maximum, average, and standard deviation.
 
-```
-	
-```
-
-**10. Guessing Game:** (Challenging) Write a program that generates a random number between 1 and 100, and the user has to guess it within 5 tries. Give the user hints like "higher" or "lower" after each guess.
-
-```
-	
-```
 
 **Bonus:**
 
@@ -116,19 +99,6 @@
 	
 ```
 
-**9. Tic-Tac-Toe Game (Challenging):** Write a program that implements a basic Tic-Tac-Toe game with two human players. Use a multidimensional list to represent the board and employ turn-based logic with user input handling.
-
-```
-	
-```
-
-**10. Hangman Game (Challenging):** Write a program that implements the classic Hangman game. Let the user guess letters in a secret word while avoiding exceeding a predetermined number of wrong guesses. Use string manipulation and conditional logic to manage the gameplay.
-
-```
-	
-```
-
-
 ### Easy:
 
 5. Write a program to calculate the area of a rectangle. Take the length and width as input from the user.
@@ -150,9 +120,3 @@
 15. Implement a guessing game where the computer randomly selects a number, and the user has to guess it.
 16. Create a function that calculates the factorial of a given number.
 
-### Very Hard:
-
-17. Implement a text-based adventure game using functions and conditional statements.
-18. Write a program to sort a list of numbers in ascending order without using built-in functions.
-19. Create a program that simulates a basic file system with commands like create file, delete file, create directory, etc.
-20. Build a simple web scraper in Python that extracts information from a website.
