@@ -24,7 +24,19 @@
 # **4. Minimum of Three:** (Easy) Write a program that takes three numbers as input and prints the smallest number.
 
 # ```
-	
+# a = int(input('Pick a number '))
+# b = int(input('Pick a second number '))
+# c = int(input('Pick a third number '))
+
+# def smallestNumber(a, b, c):
+#     if a < b and a < c:
+#         print(a, 'a is smallest')
+#     elif b < a and b < c: 
+#         print(b, 'b is smallest')
+#     else:
+#         print(c, 'c is smallest')
+
+# smallestNumber(a, b, c)
 # ```
 
 # **5. Reverse a String:** (Medium) Write a program that takes a string as input and prints the reversed string.
