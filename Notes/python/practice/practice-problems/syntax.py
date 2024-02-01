@@ -42,7 +42,8 @@
 # **5. Reverse a String:** (Medium) Write a program that takes a string as input and prints the reversed string.
 
 # ```
-	
+
+
 # ```
 
 # **6. Palindrome Checker:** (Medium) Write a program that takes a string as input and checks if it is a palindrome (reads the same backward and forward).
