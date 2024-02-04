@@ -59,6 +59,14 @@
 # ```
 
 # **8. Fibonacci Sequence:** (Medium) Write a program that generates the first 10 numbers of the Fibonacci sequence (1, 1, 2, 3, 5, 8, 13, 21, 34, 55).
+# a = 0
+# b = 1
+
+# for i in range(1, 12):
+#     print(a)
+#     total = a + b
+#     a = b
+#     b = total
 
 # **9. List Statistics:** (Challenging) Write a program that takes a list of numbers as input and calculates the minimum, maximum, average, and standard deviation.
 
@@ -123,7 +131,15 @@
 # **8. Fibonacci Sequence (Hard):** Write a function that takes a number `n` as input and generates the first `n` terms of the Fibonacci sequence. Use recursion or loop with memoization to achieve this.
 
 # ```
-	
+# a = 0
+# b = 1
+# n = input('PICK A NUMBER: ')
+# for n in range(1, int(n)):
+#     print(a)
+#     total = a + b
+#     a = b
+#     b = total
+
 # ```
 
 # **9. Tic-Tac-Toe Game (Challenging):** Write a program that implements a basic Tic-Tac-Toe game with two human players. Use a multidimensional list to represent the board and employ turn-based logic with user input handling.
@@ -166,3 +182,17 @@
 # 18. Write a program to sort a list of numbers in ascending order without using built-in functions.
 # 19. Create a program that simulates a basic file system with commands like create file, delete file, create directory, etc.
 # 20. Build a simple web scraper in Python that extracts information from a website.
+
+
+# Consider a scenario where you're given a list of integers, and your task is to write a Python script that finds the sum of all the even numbers in the list.
+# numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# even_numbers = 0
+
+# for number in numbers:
+#     if number % 2 == 0:
+#         even_numbers = number + even_numbers
+    
+
+# print(even_numbers)
+
+# Create a Python script that prints a simple number pyramid pattern. The pattern for a pyramid with 5 levels should look like this:
