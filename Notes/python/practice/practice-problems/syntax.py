@@ -196,3 +196,16 @@
 # print(even_numbers)
 
 # Create a Python script that prints a simple number pyramid pattern. The pattern for a pyramid with 5 levels should look like this:
+
+# 1 
+# 2 2 
+# 3 3 3 
+# 4 4 4 4 
+# 5 5 5 5 5 
+
+# rows = input('how big is your pyramid?: ')
+
+
+# for row in range(1, int(rows) + 1):
+#     numb = row + 1
+#     print(numb, row)
