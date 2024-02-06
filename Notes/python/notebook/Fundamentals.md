@@ -101,15 +101,15 @@
 		```
 		- **Formatting strings**:
 			- this allows you to inject variables and other code into strings
-		```
-		name = "Chris" 
-		age = 28 
-		formatted_string = f"My name is {name} and I am {age} years old."
-		
-		price = 19.99 
-		quantity = 3 
-		total = f"Total cost: {price * quantity:.2f}"
-		```
+			```
+			name = "Chris" 
+			age = 28 
+			formatted_string = f"My name is {name} and I am {age} years old."
+			
+			price = 19.99 
+			quantity = 3 
+			total = f"Total cost: {price * quantity:.2f}"
+			```
 	- **booleans** -
 		- Booleans are truth evaluations and are two values: `true` and `false`
 		- boolean keywords: `and` `or` and `not` 
@@ -154,12 +154,12 @@
 			- `in_range = 5 < x < 15 # this is true`
 		- Boolean Functions:
 			- functions can return boolean values which can be used further
-		```
-		def is_positive(number): 
-			return number > 0 
-		
-		result = is_positive(5) # result is True
-		```
+			```
+			def is_positive(number): 
+				return number > 0 
+			
+			result = is_positive(5) # result is True
+			```
 	- **NaN** -
 		- NaN is a special value representing an undefined or unrepresentative result, typically arising from mathematical operations like division by zero or operations involving infinity.
 		- NaN often occurs in numerical computations, especially when dealing with:
@@ -174,33 +174,42 @@
 		- `result = none # no value`
 		- functions that do not return a value explicitly return `none`
 		- `None` is commonly used as a default value for function parameters when the absence of a specific argument value is significant.
-	```
-	 def greet(name=None): 
-		 if name is None: 
-			 name = "Guest" 
-		 print(f"Hello, {name}!") 
-		 
-	 greet() # Hello, Guest! 
-	 greet("John") # Hello, John!
-	```
+		```
+		 def greet(name=None): 
+			 if name is None: 
+				 name = "Guest" 
+			 print(f"Hello, {name}!") 
+			 
+		 greet() # Hello, Guest! 
+		 greet("John") # Hello, John!
+		```
 	- range -
-	- 
+		- the `range` function is used to generate a sequence of numbers most often used in loops. 
+		- `range` takes up to 3 arguments:
+			- `range(stop)` # when there is only one parameter, the range starts at 0 and stops at the number before the final number.
+			- `range(start, stop)` the first value is where the range starts and then stops at the number before the second.
+			- `range(start, stop, step)` the last option is how much the range increments by.
+				```
+				range_1 = range(5) # [0, 1, 2, 3, 4]
+				range_2 = range(2, 8) # [2, 3, 4, 5, 6, 7]
+				range_3 = range(1, 10, 2) # [1, 3, 5, 7, 9]
+				```
 - #### **Operators:** 
 	- Master basic arithmetic, logical, comparison, and assignment operators to perform calculations and comparisons within your code.
 		- comparison operators:
-		```
-		# Equality 
-		is_equal = 5 == 3 + 2 # is_equal is True 
-		
-		# Inequality 
-		not_equal = 10 != 5 # not_equal is True 
-		
-		# Greater than 
-		greater_than = 8 > 5 # greater_than is True
-		 
-		# Less than or equal to 
-		less_than_or_equal = 10 <= 10 # less_than_or_equal is True
-		```
+			```
+			# Equality 
+			is_equal = 5 == 3 + 2 # is_equal is True 
+			
+			# Inequality 
+			not_equal = 10 != 5 # not_equal is True 
+			
+			# Greater than 
+			greater_than = 8 > 5 # greater_than is True
+			 
+			# Less than or equal to 
+			less_than_or_equal = 10 <= 10 # less_than_or_equal is True
+			```
 		- Ternary Operator:
 		- Ellipsis (...) Operator:
 		- Matrix Multiplication Operator:
