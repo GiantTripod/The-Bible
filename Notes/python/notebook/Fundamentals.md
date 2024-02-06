@@ -189,27 +189,36 @@
 			- `range(stop)` # when there is only one parameter, the range starts at 0 and stops at the number before the final number.
 			- `range(start, stop)` the first value is where the range starts and then stops at the number before the second.
 			- `range(start, stop, step)` the last option is how much the range increments by.
-				```
-				range_1 = range(5) # [0, 1, 2, 3, 4]
-				range_2 = range(2, 8) # [2, 3, 4, 5, 6, 7]
-				range_3 = range(1, 10, 2) # [1, 3, 5, 7, 9]
-				```
+			```
+			range_1 = range(5) # [0, 1, 2, 3, 4]
+			range_2 = range(2, 8) # [2, 3, 4, 5, 6, 7]
+			range_3 = range(1, 10, 2) # [1, 3, 5, 7, 9]
+			```
+			- range looping:
+			```
+			for i in range(3):
+				print(i)
+			# Output: 0
+			#         1
+			#         2
+			
+			```
 - #### **Operators:** 
 	- Master basic arithmetic, logical, comparison, and assignment operators to perform calculations and comparisons within your code.
 		- comparison operators:
-			```
-			# Equality 
-			is_equal = 5 == 3 + 2 # is_equal is True 
-			
-			# Inequality 
-			not_equal = 10 != 5 # not_equal is True 
-			
-			# Greater than 
-			greater_than = 8 > 5 # greater_than is True
-			 
-			# Less than or equal to 
-			less_than_or_equal = 10 <= 10 # less_than_or_equal is True
-			```
+		```
+		# Equality 
+		is_equal = 5 == 3 + 2 # is_equal is True 
+		
+		# Inequality 
+		not_equal = 10 != 5 # not_equal is True 
+		
+		# Greater than 
+		greater_than = 8 > 5 # greater_than is True
+		 
+		# Less than or equal to 
+		less_than_or_equal = 10 <= 10 # less_than_or_equal is True
+		```
 		- Ternary Operator:
 		- Ellipsis (...) Operator:
 		- Matrix Multiplication Operator:

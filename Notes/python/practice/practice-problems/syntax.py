@@ -1,9 +1,10 @@
-# **1. Hello World:** (Very Easy) Write a program that prints "Hello, World!" to the console.
-
+'''**1. Hello World:** (Very Easy) Write a program that prints "Hello, World!" to the console.
+'''
 # message = input('What would you like to say? ')
 # print(message)
 
-# **2. Number Addition:** (Easy) Write a program that takes two numbers as input and prints their sum.
+
+'''**2. Number Addition:** (Easy) Write a program that takes two numbers as input and prints their sum.'''
 
 # number1 = input('choose a number: ')
 # number2 = input('choose a number: ')
@@ -11,7 +12,7 @@
 # print(int(number1) + int(number2))
 
 
-# **3. Odd or Even:** (Easy) Write a program that takes a number as input and prints "Even" if it is even, "Odd" if it is odd, and "Neither" if it is zero.
+'''**3. Odd or Even:** (Easy) Write a program that takes a number as input and prints "Even" if it is even, "Odd" if it is odd, and "Neither" if it is zero.'''
 
 # evenOrOdd = int(input('what number would you like to check? '))
 
@@ -21,7 +22,7 @@
 #     print('odd')
 
 
-# **4. Minimum of Three:** (Easy) Write a program that takes three numbers as input and prints the smallest number.
+'''**4. Minimum of Three:** (Easy) Write a program that takes three numbers as input and prints the smallest number.'''
 
 # ```
 # a = int(input('Pick a number '))
@@ -58,7 +59,9 @@
 	
 # ```
 
-# **8. Fibonacci Sequence:** (Medium) Write a program that generates the first 10 numbers of the Fibonacci sequence (1, 1, 2, 3, 5, 8, 13, 21, 34, 55).
+'''8. Fibonacci Sequence:** (Medium) Write a program that generates the first 10 numbers of the Fibonacci sequence (1, 1, 2, 3, 5, 8, 13, 21, 34, 55).'''
+
+
 # a = 0
 # b = 1
 
@@ -67,6 +70,8 @@
 #     total = a + b
 #     a = b
 #     b = total
+
+
 
 # **9. List Statistics:** (Challenging) Write a program that takes a list of numbers as input and calculates the minimum, maximum, average, and standard deviation.
 
@@ -128,7 +133,7 @@
 	
 # ```
 
-# **8. Fibonacci Sequence (Hard):** Write a function that takes a number `n` as input and generates the first `n` terms of the Fibonacci sequence. Use recursion or loop with memoization to achieve this.
+'''8. Fibonacci Sequence (Hard):** Write a function that takes a number `n` as input and generates the first `n` terms of the Fibonacci sequence. Use recursion or loop with memoization to achieve this.'''
 
 # ```
 # a = 0
@@ -184,7 +189,8 @@
 # 20. Build a simple web scraper in Python that extracts information from a website.
 
 
-# Consider a scenario where you're given a list of integers, and your task is to write a Python script that finds the sum of all the even numbers in the list.
+'''Consider a scenario where you're given a list of integers, and your task is to write a Python script that finds the sum of all the even numbers in the list.'''
+
 # numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # even_numbers = 0
 
@@ -192,20 +198,49 @@
 #     if number % 2 == 0:
 #         even_numbers = number + even_numbers
     
-
 # print(even_numbers)
 
-# Create a Python script that prints a simple number pyramid pattern. The pattern for a pyramid with 5 levels should look like this:
-
-# 1 
-# 2 2 
-# 3 3 3 
-# 4 4 4 4 
-# 5 5 5 5 5 
-
-# rows = input('how big is your pyramid?: ')
 
 
-# for row in range(1, int(rows) + 1):
-#     numb = row + 1
-#     print(numb, row)
+'''Create a Python script that prints a simple number pyramid pattern. The pattern for a pyramid with 5 levels should look like this:
+
+1 
+2 2 
+3 3 3 
+4 4 4 4 
+5 5 5 5 5 '''
+
+
+# levels = int(input('how big is your pyramid? '))
+
+# for level in range(1, levels + 1):
+#     for _ in range(level):
+#         print(level, end=' ')
+#     print()
+
+
+
+'''Write a script that checks numbers from 1 to 50 and prints "Fizz" for multiples of 3, "Buzz" for multiples of 5, "FizzBuzz" for multiples of both 3 and 5, and the number itself for all other cases.
+
+This problem, often called "FizzBuzz", is a classic programming challenge that tests your understanding of both loops and conditionals. Here's how you can approach it:
+
+Use a loop to iterate through numbers 1 to 50.
+For each number, you'll need a series of if statements (or one combined statement using elif) to check the conditions:
+If the number is a multiple of both 3 and 5 (you can use the modulo operator % to check for no remainder).
+If the number is only a multiple of 3.
+If the number is only a multiple of 5.
+If none of the above conditions are true, just print the number.
+Print the appropriate response based on these conditions.'''
+
+
+# fizzy_Numbers = int(input('how many bubbles do you want? '))
+
+# for fizz in range(1, fizzy_Numbers + 1):
+#     if fizz % 5 == 0 and fizz % 3 == 0:
+#         print('fizzbuzz')
+#     elif fizz % 5 == 0:
+#         print("buzz")
+#     elif fizz % 3 == 0:
+#         print("fizz")
+#     else:
+#         print(fizz)
