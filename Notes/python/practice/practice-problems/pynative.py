@@ -34,3 +34,42 @@ Write a program to accept a string from the user and display characters that are
 #         print(string[x])
 #     else:
 #         pass
+
+"""Exercise 4: Remove first n characters from a string
+Write a program to remove characters from a string starting from zero up to n and return a new string.
+
+For example:
+
+    remove_chars("pynative", 4) so output must be tive. Here, we need to remove the first four characters from a string.
+    remove_chars("pynative", 2) so output must be native. Here, we need to remove the first two characters from a string.
+
+Note: n must be less than the length of the string."""
+
+# word_slice = input('what word are we slicing? ')
+# num_chars = int(input('how many letters are we slicing? '))
+
+# def remove_chars(word_slice, num_chars):
+#     sliced = word_slice[num_chars:]
+#     print(sliced)
+
+# remove_chars(word_slice, num_chars)
+
+
+"""Exercise 5: Check if the first and last number of a list is the same
+Write a function to return True if the first and last number of a given list is same. If numbers are different then return False.
+
+numbers_x = [10, 20, 30, 40, 10]
+numbers_y = [75, 65, 35, 75, 30]
+"""
+
+# numbers_x = [10, 20, 30, 40, 10]
+# numbers_y = [75, 65, 35, 75, 30]
+
+# def comp_num(list):
+#     if list[0] == list[-1]:
+#         print(True)
+#     else:
+#         print(False)
+
+# comp_num(numbers_y)
+# comp_num(numbers_x)
