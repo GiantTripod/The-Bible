@@ -252,7 +252,27 @@ fruits = ["apple", "banana", "cherry"]
 for fruit in fruits:
     print(fruit)
 ```
-- The `range()` function is commonly used for looping a specific number of times.
+- range
+	- the `range` function is used to generate a sequence of numbers most often used in loops. 
+		- `range` takes up to 3 arguments:
+			- `range(stop)` # when there is only one parameter, the range starts at 0 and stops at the number before the final number.
+			- `range(start, stop)` the first value is where the range starts and then stops at the number before the second.
+			- `range(start, stop, step)` the last option is how much the range increments by.
+	```
+	range_1 = range(5) # [0, 1, 2, 3, 4]
+	range_2 = range(2, 8) # [2, 3, 4, 5, 6, 7]
+	range_3 = range(1, 10, 2) # [1, 3, 5, 7, 9]
+	```
+
+	- range looping:
+
+	```
+	for i in range(3):
+		print(i)
+	# Output: 0
+	#         1
+	#         2
+	```
 - **While Loops:**
 	- Repeats as long as a certain boolean condition is met.
 	- Good for scenarios where the number of iterations is not known before the loop starts.
@@ -398,11 +418,137 @@ for num in range(2, 10):
 		# even after `outer_function` has finished executing.
 		```
 		- **Decorators:** Decorators are a very powerful and useful tool in Python since they allow you to modify the behavior of a function or class. Decorators allow you to wrap another function in order to extend the behavior of the wrapped function, without permanently modifying it.
+			- ***Characteristics of Decorators:***
+				- **Decorators are functions that take another function and extend its behavior without explicitly modifying it.**
+				- **They are represented by the `@` symbol and are placed above the definition of the function you want to decorate.**
+				```
+				def my_decorator(func):
+				    def wrapper():
+				        print("Something is happening before the function is
+				        called.")
+				        func()
+				        print("Something is happening after the function is
+				        called.")
+				    return wrapper
+				
+				@my_decorator
+				def say_hello():
+				    print("Hello!")
+				
+				say_hello()
+				
+				# When you call `say_hello()`, it's not just calling the
+				# `say_hello` function 
+				# anymore, but the wrapped version provided by `my_decorator`.
+				```
+				- ***Using Decorators with Parameters***
+					- If the original function takes parameters, the wrapper function must also take those parameters.
+				```
+				def decorator_with_args(func):
+					def wrapper(*args, **kwargs):
+						print("Before the decorated function")
+						result = func(*args, **kwargs)
+						print("After the decorated function")
+						return result
+					return wrapper
+				
+				@decorator_with_args
+				def say_something(name, message):
+					print(f"{name} says {message}")
+				
+				say_something("John", "Hello")
+				```
+				
 - **Modules:** Re-usability is a key part of Python. You can import modules (standard library or third-party) to use in your program. Example: `import math`. You can also create your own modules by saving your functions in a `.py` file and importing it.
 
 # **4. Data Structures:**
 
 - **Lists:** Master creating and manipulating lists, mutable sequences of elements enclosed in square brackets. Understand indexing, slicing, and common list methods.
+	- ### Creating Lists
+		- Lists are defined by square brackets `[]`, with items separated by commas:
+		```
+		my_list = [1, 2, 3]
+		names = ["Alice", "Bob", "Charlie"]
+		mixed = [1, "Alice", True, 2.34]
+		
+		```
+	- ### Accessing List Elements
+		- List elements are accessed by their index, starting from zero:
+		```
+		print(names[0])  # Alice
+		print(names[-1]) # Charlie, negative index counts from the end
+		
+		```
+		- ### Slicing Lists
+			- Slicing allows you to obtain a new list containing a subset of the original list:
+			```
+			numbers = [0, 1, 2, 3, 4, 5]
+			print(numbers[2:5])  # [2, 3, 4], includes start index but excludes end index
+			print(numbers[:3])   # [0, 1, 2], starts from beginning
+			print(numbers[3:])   # [3, 4, 5], goes to the end
+			print(numbers[-3:])  # [3, 4, 5], last three elements
+			
+			```
+		- ### Modifying Lists
+			- Lists are mutable, so you can change their elements, add new ones, or remove them:
+			```
+			# Changing an element
+			my_list[0] = 99
+			
+			# Adding elements
+			my_list.append(4)   # Adds to the end
+			my_list.insert(1, 88) # Inserts 88 at index 1
+			
+			# Removing elements
+			del my_list[0]      # Removes the first element
+			my_list.remove(88)  # Removes the first occurrence of 88
+			popped = my_list.pop() # Removes the last element and returns it
+			
+			```
+			- ### List Operations
+				- **Concatenation**: Joining lists together:
+				```
+				combined = [1, 2, 3] + [4, 5, 6]  # [1, 2, 3, 4, 5, 6]
+				
+				```
+				- **Repetition**: Repeating lists:
+				```
+				repeated = ["a"] * 4  # ["a", "a", "a", "a"]
+				
+				```
+				- **Membership**: Checking if an item exists in a list:
+				```
+				exists = 3 in [1, 2, 3]  # True
+				
+				```
+			- ### Iterating Over Lists
+				- You can iterate over the elements of a list using a `for` loop:
+				```
+				 for name in names:
+				    print(name)
+				
+				```
+			- ### List Comprehensions
+				- List comprehensions provide a concise way to create lists. Common applications are to make new lists where each element is the result of some operations applied to each member of another sequence or iterable, or to create a sub-sequence of those elements that satisfy a certain condition.
+				```
+				squares = [x ** 2 for x in range(10)]  
+				# [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+				even_squares = [x ** 2 for x in range(10) if x % 2 == 0]  
+				# [0, 4, 16, 36, 64]
+				
+				```
+			- ### Common List Methods
+				- `append(x)`: Adds an item to the end of the list.
+				- `extend(iterable)`: Extends the list by appending elements from the iterable.
+				- `insert(i, x)`: Inserts an item at a given position.
+				- `remove(x)`: Removes the first item from the list whose value is x.
+				- `pop([i])`: Removes the item at the given position in the list, and returns it. If no index is specified, `pop()` removes and returns the last item in the list.
+				- `clear()`: Removes all items from the list.
+				- `index(x[, start[, end]])`: Returns the index of the first item whose value is x.
+				- `count(x)`: Returns the number of times x appears in the list.
+				- `sort(key=None, reverse=False)`: Sorts the items of the list in place.
+				- `reverse()`: Reverses the elements of the list in place.
+				- `copy()`: Returns a shallow copy of the list.
 - **Tuples:** Explore immutable sequences similar to lists but defined with parentheses. Learn about their unique properties and use cases.
 - **Dictionaries:** Key-value pairs enclosed in curly braces, dictionaries are perfect for storing and accessing data by unique keys. Understand accessing, updating, and iterating through dictionaries.
 - **sets**:
