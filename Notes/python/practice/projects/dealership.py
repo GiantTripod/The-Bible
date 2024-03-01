@@ -1,19 +1,64 @@
-class Vehicle:
-    def __init__(self, name, speed, mileage, capacity):
-        self.speed = speed
-        self.mileage = mileage
-        self.name = name
+import csv
+
+class Dealership:
+    def __init__(self, salesmen=None, total_sales=None, capacity=None):
+        self.salesmen = salesmen
+        self.total_sales = total_sales
         self.capacity = capacity
+        self.cars = []
+
+    def add_car(self, car):
+        self.cars.append(car)
 
 
-class Bus(Vehicle):
-    def seating(self):
-        return f'the seating capacity of {self.name} is {self.capacity}'
+
+class Car:
+    def __init__(self, make, model, year, price):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.price = price
 
 
-tesla = Vehicle("tesla", 200, 50_000, 5)
-school_bus = Bus("school bus", 180, 12, 50)
-print(f"Vehicle name: {school_bus.name} speed: {school_bus.speed} Mileage: {school_bus.mileage}")
-print(tesla.speed, tesla.mileage)
+class NewCar(Car):
+    def __init__(self, make, model, year, price):
+        super().__init__(make, model, year, price)
 
-print(school_bus.seating())
+class UsedCar(Car):
+    def __init__(self, make, model, year, price, mileage):
+        super().__init__(make, model, year, price)
+        self.mileage = mileage
+
+def load_cars(filename):
+    dealership = Dealership()
+    with open(filename, 'r') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            car_details = row['Model'].split(' ', 2)
+            make = car_details[1]
+            model = car_details[2]
+            car_price = row['Price'].split('$', 1)
+            price = car_price[1] if len(car_price) > 1 else car_price[0]
+            price = price.replace(',', '')
+            car_mileage = row['Mileage'].split(' ', 1)
+            mileage = car_mileage[0]
+            if row['Status'] == 'New':
+                car = NewCar(make, model, int(row['Year']), int(price.replace(',', '_')))
+            else:
+                car = UsedCar(make, model, int(row['Year']), int(price.replace(',', '_')), int(mileage.replace(',', '_')))
+            dealership.add_car(car)
+    return dealership
+
+dealership = load_cars('python/practice/projects/car_data.csv')
+
+
+
+
+def list_all_cars(dealership):
+    for car in dealership.cars:
+        print(car.make, car.model, car.year, car.price)
+
+list_all_cars(dealership)
+# class Car:
+#     def __init__(self, make, model, year, status, mileage, price):
+#         pass
